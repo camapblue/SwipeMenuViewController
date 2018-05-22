@@ -132,6 +132,8 @@ public protocol SwipeMenuViewDelegate: class {
 
     /// Called after swiping the page.
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, didChangeIndexFrom fromIndex: Int, to toIndex: Int)
+    
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, scrollViewDidScroll scrollView: UIScrollView)
 }
 
 extension SwipeMenuViewDelegate {
@@ -416,6 +418,8 @@ extension SwipeMenuView: UIScrollViewDelegate {
         }
 
         updateTabViewAddition(by: scrollView)
+        
+        delegate?.swipeMenuView(self, scrollViewDidScroll: scrollView)
     }
 
     public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {

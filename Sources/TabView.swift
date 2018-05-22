@@ -166,6 +166,8 @@ open class TabView: UIScrollView {
 
         containerView.backgroundColor = .clear
         addSubview(containerView)
+        
+        self.backgroundColor = options.backgroundColor
     }
 
     fileprivate func setupTabItemViews() {

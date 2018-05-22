@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallpaper-2018-World-Cup-iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="7tK-2u-bg3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7u-0R-yRV">
                                 <rect key="frame" x="279" y="577" width="80" height="80"/>
                                 <constraints>
@@ -46,7 +49,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RCt-r4-HCW" firstAttribute="bottom" secondItem="g7u-0R-yRV" secondAttribute="bottom" constant="10" id="4ms-kt-bai"/>
+                            <constraint firstItem="7tK-2u-bg3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="56H-Vh-4CO"/>
                             <constraint firstItem="RCt-r4-HCW" firstAttribute="trailing" secondItem="g7u-0R-yRV" secondAttribute="trailing" constant="16" id="fVn-35-H4z"/>
+                            <constraint firstItem="7tK-2u-bg3" firstAttribute="leading" secondItem="RCt-r4-HCW" secondAttribute="leading" id="fo4-BE-Mnq"/>
+                            <constraint firstItem="RCt-r4-HCW" firstAttribute="trailing" secondItem="7tK-2u-bg3" secondAttribute="trailing" id="hlX-jr-P5o"/>
+                            <constraint firstAttribute="bottom" secondItem="7tK-2u-bg3" secondAttribute="bottom" id="qaw-eH-RTK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RCt-r4-HCW"/>
                     </view>
@@ -329,6 +336,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Wallpaper-2018-World-Cup-iPhone" width="360" height="640"/>
         <image name="settings" width="66" height="66"/>
     </resources>
 </document>
