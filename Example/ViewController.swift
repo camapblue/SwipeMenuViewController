@@ -26,6 +26,11 @@ final class ViewController: SwipeMenuViewController {
     }
 
     private func reload() {
+        options.tabView.backgroundColor = UIColor(white: 0.0, alpha: 0.3)
+        options.tabView.margin = 16
+        options.tabView.itemView.margin = 16
+        options.tabView.underlineView.height = 2
+        
         swipeMenuView.reloadData(options: options)
     }
 
@@ -47,7 +52,10 @@ final class ViewController: SwipeMenuViewController {
         print("did change from section\(fromIndex + 1)  to section\(toIndex + 1)")
     }
 
-
+    override func swipeMenuView(_ swipeMenuView: SwipeMenuView, scrollViewDidScroll scrollView: UIScrollView) {
+        print("did scroll to \(scrollView.contentOffset.x)")
+    }
+    
     // MARK - SwipeMenuViewDataSource
 
     override func numberOfPages(in swipeMenuView: SwipeMenuView) -> Int {
